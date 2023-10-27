@@ -1,0 +1,508 @@
+@charset "utf-8";
+/* 
+   v1.0 | 20220516
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0; border: 0;
+	font-size: 100%; font: inherit; font-family: "NotoSansKR", 'Malgun Gothic', "맑은고딕", Dotum, sans-serif; 
+    line-height: 1.2; letter-spacing: -.0344rem; color: var(--color-fontColor);
+	vertical-align: baseline;
+}
+html, body {
+  position: relative;
+  width: 100%; height: 100%;
+  overflow-y: auto;
+}
+body {
+  width: 100%; min-width: 1900px;
+  line-height: 1;
+  outline: 0;
+  overflow-x: hidden;
+  background-color: #F9FBFD;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+*, :after, :before {
+  box-sizing: border-box;
+}
+a, a:hover, a:focus, a:active {
+  font-family: var(--font-family-noto);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  outline: none;
+  cursor: pointer;
+}
+div { box-sizing: border-box !important; }
+article, aside, footer, header, hgroup, main, nav, section { display: block }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+address { display: block; }
+figcaption { display: block }
+hr {
+  display: block; overflow: hidden;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em; margin-block-end: 0.5em; margin-inline-start: auto; margin-inline-end: auto;
+  border-style: inset; border-width: 1px
+}
+map {
+  display: inline
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+}
+video {
+  object-fit: contain;
+}
+video:-webkit-full-page-media {
+  margin: auto; position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  max-height: 100%; max-width: 100%;
+}
+img {
+  border-style: none;
+}
+button {
+  background: none;
+  border: 0;
+}
+i {
+  display: block;
+  font-size: 0;
+}
+strong {
+  font-weight: bold;
+  font-weight: 700;
+}
+span {
+  display: inline-block;
+}
+p {
+  font-size: var(--font-size-text-02); font-weight: 500;
+}
+
+/* form elements */
+form {
+  display: inline-block;
+  width: auto;
+}
+:-webkit-any(table, thead, tbody, tfoot, tr) > form:-internal-is-html {
+  display: none !important;
+}
+label {
+  cursor: default;
+}
+legend {
+  display: block;
+  padding-inline-start: 2px;
+  padding-inline-end: 2px;
+  border: none
+}
+i {
+  font-size: 0;
+}
+
+.clearfix:after {
+  content: " "; 
+  display: block; 
+  clear: both;
+}
+.inb {
+  font-size: 0;
+}
+.inb > * {
+  /* display: inline-block; */
+  vertical-align: top;
+}
+.mT50 { margin-top: 50px !important; }
+.fc-red {color: var(--color-red);}
+
+.type-dash {
+  text-indent: -8px;
+  padding-left: 8px;
+}
+
+
+/******************************************************************
+           input & textarea Style Css 
+********************************************************************/
+input[type=text], input[type=tel], input[type=email], input[type=password], input[type=url], input[type=number], input[type=search], input[type=date],
+textarea {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; 
+  outline: none;
+  font-family: var(--font-family-roboto);
+  border: none;
+  resize: none;
+}
+input[type="number"] {
+  width: 0%;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* input search x 버튼 삭제 및 클리어 IE의 경우 */
+input::-ms-clear,
+input::-ms-reveal {
+  display:none;
+}
+
+/* input search x 버튼 삭제 및 클리어 크롬의 경우 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+  display:none;
+}
+
+/* PLACEHOLDER */
+::-webkit-input-placeholder { color: #acacac; }
+    ::-ms-input-placeholder { color: #acacac; }
+         ::-moz-placeholder { color: #acacac; }
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { color: transparent; }
+          input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { color: transparent; }
+                  input:focus::-moz-placeholder, textarea:focus::-moz-placeholder { color: transparent; }
+
+input {
+  vertical-align: middle;
+  outline: none; border:none;
+  border-radius: 0; padding: 0; margin: 0;
+  font-size: var(--font-14); font-weight: 400;
+  color: var(--color-fontGray);
+}
+input:focus {
+  border-color: var(--color-point);
+}
+
+/******************************************************************
+           checkbox Style Css 
+********************************************************************/
+/****************************************  label check만 할경우 **/
+.check-box {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: flex-start;
+  font-size: var(--font-14); font-weight: 300;
+  color: var(--color-fontGray);
+  cursor: pointer;
+}
+.check-box .checkbox {
+  display: inline-block;
+  height: 15px; width: 15px;
+  margin: 0 7px 0 0;
+  border: 1px solid #646464;
+  cursor: pointer;
+}
+.checkbox label {
+  position: relative;
+  display: block;
+  height: 18px; width: 18px;
+  cursor: pointer;
+}
+.checkbox label:after {
+  content: '';
+  position: absolute; top: 8px; left: 1px;
+  -webkit-transform: scaleX(-1) rotate(135deg);
+      -moz-transform: scaleX(-1) rotate(135deg);
+      -ms-transform: scaleX(-1) rotate(135deg);
+          transform: scaleX(-1) rotate(135deg);
+  -webkit-transform-origin: left top;
+      -moz-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
+  border-top: 2px solid transparent; border-right: 2px solid transparent;
+  height: 10px; width: 5px;
+}
+.checkbox label:hover:after {
+  border-color: transparent;
+}
+.checkbox input {
+  display: none;
+}
+.checkbox input:checked + label:after {
+  -webkit-animation: check 0.8s;
+      -moz-animation: check 0.8s;
+        -o-animation: check 0.8s;
+          animation: check 0.8s;
+  border-color: var(--color-skyblue);
+}
+
+@keyframes check {
+  0% {
+    height: 0; width: 0;
+  }
+  25% {
+    height: 0; width: 5px;
+  }
+  50% {
+    height: 10px; width: 5px;
+  }
+}
+
+/****************************************  label text 있는 경우 **/
+.checkbox-text-item {
+  position: relative;
+  width: 100%; height: 100%;
+}
+.checkbox-text-item label {
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100%; height: 100%;
+  color: var(--color-light-blue); font-size: var(--font-14); font-weight: 500;
+  cursor: pointer;
+}
+.checkbox-text-item label span {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  width: 15px; height: 15px;
+  border: 1px solid #646464;
+  transform-origin: center;
+  margin-right: 10px;
+  transition: background-color 150ms 200ms, transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
+}
+.checkbox-text-item label span:before {
+  content: "";
+  width: 0px; height: 2px;
+  background: #646464;
+  position: absolute; top: 6px; left: 3px;
+  transform: rotate(45deg);
+  transition: width 50ms ease 50ms;
+  transform-origin: 0% 0%;
+}
+.checkbox-text-item label span:after {
+  content: "";
+  width: 0; height: 2px;
+  background: #646464;
+  position: absolute; top: 10px; left: 4px;
+  transform: rotate(305deg);
+  transition: width 50ms ease;
+  transform-origin: 0% 0%;
+}
+.checkbox-text-item label:hover span:before {
+  width: 5px;
+  transition: width 100ms ease;
+}
+.checkbox-text-item label:hover span:after {
+  width: 10px;
+  transition: width 150ms ease 100ms;
+}
+.checkbox-text-item input[type=checkbox] {
+  display: none;
+}
+.checkbox-text-item input[type=checkbox]:checked + label {
+  color: var(--color-skyblue);
+}
+.checkbox-text-item input[type=checkbox]:checked + label span {
+  background-color: var(--color-white);
+  border-color: var(--color-skyblue);
+}
+.checkbox-text-item input[type=checkbox]:checked + label span:after {
+  width: 10px;
+  background: var(--color-skyblue);
+  transition: width 150ms ease 100ms;
+}
+.checkbox-text-item input[type=checkbox]:checked + label span:before {
+  width: 5px;
+  background: var(--color-skyblue);
+  transition: width 150ms ease 100ms;
+}
+.checkbox-text-item input[type=checkbox]:checked + label:hover span {
+  background-color: var(--color-white);
+}
+.checkbox-text-item input[type=checkbox]:checked + label:hover span:after {
+  width: 10px;
+  background: var(--color-skyblue);
+  transition: width 150ms ease 100ms;
+}
+.checkbox-text-item input[type=checkbox]:checked + label:hover span:before {
+  width: 5px;
+  background: var(--color-skyblue);
+  transition: width 150ms ease 100ms;
+}
+
+
+/******************************************************************
+           radioBox Style Css 
+********************************************************************/
+.radiobox {
+  position: relative;
+  margin-left: 15px;
+}
+.radiobox:first-child {
+  margin-left: 0;
+}
+.radiobox input {
+  width: 100%;
+}
+.checkbox-custom, .radio-custom {
+  opacity: 0;
+  position: absolute;
+}
+.checkbox-custom, .checkbox-custom-label,
+.radio-custom, .radio-custom-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+.checkbox-custom-label, .radio-custom-label {
+  position: relative;
+  display: flex; align-items: center;
+  font-size: var(--font-14); font-weight: 400;
+  color: var(--color-fontGray);
+}
+.radio-custom + .radio-custom-label:before {
+  content: '';
+  display: flex; align-items: center;
+  background: #646464;
+  border: 1px solid #646464;
+  width: 15px; height: 15px;
+  padding: 2px; margin-right: 5px;
+  text-align: center;
+  box-shadow: inset 0px 0px 0px 3px #fff;
+}
+.radio-custom + .radio-custom-label:before {
+ border-radius: 50%;
+ border-color: #C8C8C8;
+}
+.radio-custom:checked + :before {
+  background: var(--color-skyblue);
+  border-color: var(--color-skyblue);
+  box-shadow: inset 0px 0px 0px 3px #fff;
+}
+.radio-custom:focus + .radio-custom-label:before {
+ border: 1px solid var(--color-skyblue);
+}
+/* 
+.radio-custom:checked + label {
+    color: var(--color-skyblue);
+}
+*/
+
+
+/******************************************************************
+           selectBox Style Css 
+********************************************************************/
+select { 
+    border-radius:0;          /* 아이폰 사파리 보더 없애기 */
+    /* 네이티브 외형 감추기 */ 
+    -webkit-appearance:none;  /* 화살표 없애기 for chrome*/ 
+       -moz-appearance:none;  /* 화살표 없애기 for firefox*/ 
+            appearance:none;  /* 화살표 없애기 공통*/
+    background: url('') no-repeat 95% 50%;  /* 화살표 모양의 이미지 */ 
+    background-size: 0;
+}
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+select::-ms-expand { 
+    display: none;
+}
+select {
+    -webkit-appearance: none; /* 스핀 버튼 제거 */
+            appearance: none;
+    border-radius: 0; /* border-radius 제거 */
+    border: none;     /* select 요소의 테두리 제거 */
+    width: 100%;
+    padding: 0;
+    font-size: var(--font-size-12); font-weight: 500;
+    cursor: pointer;
+}
+option {
+    border: none;
+    border-radius: 0;
+}
+select:focus, select:active {
+    outline: 0;
+}
+.select-box {
+  position: relative; z-index: 2;
+  display: inline-block;
+  width: 100%; height: 50px;
+  background-color: var(--color-white);
+  border: 1px solid #EBEDF2; border-radius: 3px;
+  cursor: pointer;
+}
+.select-box:after {
+  content: "";
+  position: absolute; top: 12px; bottom: auto; right: 18px;
+  width: 17px; height: 17px;
+  background-color: #495057;
+  -webkit-mask: url('/asset/img/icon/icon-select.svg') no-repeat center;
+          mask: url('/asset/img/icon/icon-select.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+.select-box select {
+  font-family: var(--font-family-noto);
+  font-size: var(--font-16); font-weight: 500; color: #495057;
+  width: 100%; height: 100%;
+  padding-left: 10%;
+}
+
+
+/******************************************************************
+            root Style Css
+********************************************************************/
+:root {
+  /* font color style */
+  --color-fontColor:  #000;
+  --color-fontNavy:   #2A3C4B;
+  --color-fontGray:   #787878;
+
+  /* color style */
+  --color-point: #2D3D56;
+
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-silver: #BEBEBE;
+  --color-gray:   #828282;
+  --color-snow:   #F0F0F0;
+
+  --color-red:        #FF2F2F;
+  --color-light-blue: #93C3D6;
+  --color-skyblue:    #23B0FF;
+  --color-azure:      #14AAFA;
+  --color-lime:       #B1D92D;
+  --color-yellow:     #FFE81D;
+  --color-orange:     #FF7511;
+  
+  
+/* font size style */
+  --font-14: 14px;   /* 14px */
+  --font-16: 16px;   /* 16px */
+  --font-20: 20px;   /* 20px */
+  --font-30: 30px;   /* 30px */
+    
+/* font family style */
+  --font-family-noto:   'NotoSansKR', sans-serif;
+  --font-family-malgun: 'Malgun Gothic', '맑은고딕', sans-serif;
+}

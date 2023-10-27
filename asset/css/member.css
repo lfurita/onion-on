@@ -1,0 +1,94 @@
+
+/******************************************************************
+             Common Style Css
+********************************************************************/
+.acnt-infrm-box > h3, .afstr-mngmn-box > h3 {
+  display: flex; align-items: center;
+  background-color: var(--color-lime);
+  width: 100%; height: 50px;
+  font-size: var(--font-20); font-weight: 600;
+  padding-left: 17px;
+}
+
+/******************************************************************
+             table Style Css
+********************************************************************/
+.table-mypg {
+  width: 100%;
+}
+.table-mypg tr th,
+.table-mypg tr td {
+  padding: 6px 15px;
+  font-size: var(--font-16); font-weight: 300;
+  color: var(--color-fontGray);
+  background-color: #EBEBEB;
+  border-left: 3px solid #F9FBFD; border-bottom: 3px solid #F9FBFD;
+  text-align: center; line-height: 1.1;
+  vertical-align: middle;
+  word-break: keep-all;
+}
+.table-mypg tr:nth-child(2n+1) td {
+  background-color: #DCDCDC;
+}
+.table-mypg tr th:first-child,
+.table-mypg tr td:first-child {
+  border-left: 0px;
+}
+.table-mypg thead tr th {
+  background-color: var(--color-point);
+  font-size: var(--font-20); font-weight: 600; color: var(--color-white);
+}
+.table-mypg tr td.left {
+  text-align: left;
+}
+.table-mypg tr td.right {
+  text-align: right;
+}
+.table-mypg tr td a.text-link {
+  color: var(--color-black);
+  font-size: var(--font-16); font-weight: 300;
+}
+
+
+/******************************************************************
+             Mypage Style Css
+********************************************************************/
+.acnt-infrm-box {
+  width: calc(100% - 50px);
+  margin-top: 30px;
+}
+.acnt-infrm-box > ul {
+  display: flex;
+  flex-direction: row; flex-wrap: wrap;
+  margin-top: 17px;
+}
+.acnt-infrm-box > ul li {
+  display: flex; align-items: center;
+  width: calc(100% - 176px); height: 50px;
+  font-size: var(--font-16); font-weight: 600;
+  color: var(--color-black);
+  margin-top: 3px; margin-left: 22px; padding-left: 17px;
+  background-color: #DCDCDC;
+}
+.acnt-infrm-box > ul li:nth-child(2n+1) {
+  width: 154px;
+  color: #787878; font-size: 300;
+  margin-left: 0;
+}
+.acnt-infrm-box > ul li:nth-child(4n+1),
+.acnt-infrm-box > ul li:nth-child(4n+2) {
+  background-color: #EBEBEB;
+}
+.acnt-infrm-box > ul li.title-head {
+  background-color: var(--color-point);
+  color: var(--color-white); font-size: var(--font-20);
+  margin-top: 0;
+}
+
+.afstr-mngmn-box {
+  width: calc(100% - 50px);
+  margin-top: 40px;
+}
+.afstr-mngmn-box > table {
+  margin-top: 15px;
+}

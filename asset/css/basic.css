@@ -1,0 +1,412 @@
+
+/******************************************************************
+             Header Style Css
+********************************************************************/
+header {
+  position: fixed; top: 0; left: 0; z-index: 9;
+  display: flex;
+  flex-direction: row; justify-content: space-between; align-items: center;
+  width: 100%; height: 50px;
+  background-color: var(--color-point);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .35);
+}
+header .logo-box {
+  width: auto; height: 22px;
+  margin-left: 20px;
+}
+header .logo-box > img {
+  width: auto; height: 100%;
+}
+header .my-conts-box {
+  display: flex; align-items: center;
+  margin-right: 20px;
+}
+header .my-conts-box > a {
+  font-size: var(--font-14); font-weight: 400;
+}
+header .my-conts-box .mypage {
+  display: flex; align-items: center;
+  margin-right: 30px;
+  color: var(--color-white);
+}
+header .my-conts-box .mypage > span {
+  color: var(--color-white);
+}
+header .my-conts-box .mypage > .icon-profile {
+  width: 24px; height: 24px;
+  background-color: var(--color-white);
+  margin-right: 8px;
+}
+header .my-conts-box .logout {
+  color: var(--color-lime);
+}
+header .my-conts-box .mypage:hover,
+header .my-conts-box .mypage:hover > span {
+  color: var(--color-yellow);
+}
+header .my-conts-box .logout:hover {
+  color: var(--color-orange);
+}
+header .my-conts-box .mypage:hover > .icon-profile {
+  background-color: var(--color-yellow);
+}
+
+
+
+/******************************************************************
+             Footer Style Css
+********************************************************************/
+footer {
+  position: fixed; bottom: 0px; left: 0px; z-index: 9;
+  background-color: var(--color-white);
+  width: 100%; height: 0px;
+}
+footer > .inner {
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center;
+  height: 100%;
+}
+
+
+/******************************************************************
+             icon Style Css
+********************************************************************/
+i.icon-profile {
+  -webkit-mask: url('/asset/img/icon/icon-profile.svg') no-repeat center;
+          mask: url('/asset/img/icon/icon-profile.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-refresh {
+  -webkit-mask: url('/asset/img/icon/icon-refresh.svg') no-repeat center;
+          mask: url('/asset/img/icon/icon-refresh.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-graph {
+  -webkit-mask: url('/asset/img/icon/icon-graph.svg') no-repeat center;
+          mask: url('/asset/img/icon/icon-graph.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+i.icon-list {
+  -webkit-mask: url('/asset/img/icon/icon-list.svg') no-repeat center;
+          mask: url('/asset/img/icon/icon-list.svg') no-repeat center;
+  -webkit-mask-size: cover; mask-size: cover;
+}
+
+
+/******************************************************************
+             Common Style Css
+********************************************************************/
+.content-wrap {
+  position: relative;
+  display: flex;  flex-wrap: wrap; align-items: flex-start;
+  width: 100%; height: calc(100vh - 50px);
+  margin-top: 50px;
+  overflow: hidden;
+}
+.content-wrap .dash-board-wrap,
+.content-wrap .sub-conts-wrap {
+  height: calc(100vh - 50px); width: calc(100% - 180px);
+  overflow-y: auto;
+}
+.content-wrap .wrap > h1 {
+  font-size: 0;
+}
+.content-wrap .wrap > h2 {
+  display: flex; align-items: center;
+  font-size: var(--font-20); font-weight: 300;
+  color: var(--color-fontNavy);
+}
+.content-wrap .wrap > h2 > strong {
+  font-weight: 700;
+}
+.button-center-box {
+  display: flex;
+  justify-content: center; align-items: center;
+  margin: 20px auto 0;
+}
+.button-center-box > a {
+  display: flex; justify-content: center; align-items: center;
+  width: 100%; height: 50px;
+  font-size: var(--font-14); font-weight: 500; color: var(--color-white);
+}
+
+
+/******************************************************************
+              menu Style Css
+********************************************************************/
+.menu-wrap {
+  width: 180px; height: calc(100vh - 50px);
+  box-sizing: border-box;
+  background-color: var(--color-point);
+  overflow-y: auto;
+}
+.menu-wrap .inner {
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  width: 100%; height: 100%;
+  font-size: var(--font-14); font-weight: 400;
+  color: var(--color-white);
+}
+.menu-wrap .inner > h2 {
+  display: flex; justify-content: center; align-items: center;
+  width: 100%;
+  font-size: var(--font-30); font-weight: 700;
+  color: var(--color-white);
+}
+.menu-wrap .inner > .link-item {
+  display: flex;
+  flex-direction: column; align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.menu-wrap .inner > .link-item > strong {
+  font-size: var(--font-20); font-weight: 700;
+  color: var(--color-white);
+  margin-top: 30px;
+}
+.menu-wrap .inner > .link-item > a {
+  display: flex; justify-content: center; align-items: center;
+  width: 100%;
+  font-size: var(--font-14); font-weight: 400;
+  color: var(--color-silver);
+  padding: 15px 0 10px;
+}
+.menu-wrap .inner > .link-item > a:hover {
+  color: #1AFFFF;
+}
+
+
+/********************************************************************
+              pagination style css
+********************************************************************/
+.paginate {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: center; align-items: center;
+  width: 100%;
+  font-weight: 500; font-size: 0; text-align: center;
+  margin: 30px 0 20px;
+}
+.paginate a {
+  position: relative; 
+  zoom: 1;
+  -webkit-box-sizing: border-box; box-sizing: border-box;
+  display: flex;
+  flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: center;
+  width: 27px; height: 26px;
+  border: 1px solid transparent; background-color: transparent; border-radius: 3px;
+  font-size: 14px; font-weight: normal;
+  line-height: 26px; color: var(--color-fontColor);
+  margin: 0 3px; padding: 0px;
+}
+.paginate a.active {
+  color: var(--color-point);
+  background: transparent;
+  border: 1px solid var(--color-point);
+}
+.paginate a.first, .paginate a.last,
+.paginate a.prev, .paginate a.next {
+  width: 27px; height: 26px;
+}
+.paginate a.prev {
+  margin-right: 10px;
+}
+.paginate a.next {
+  margin-left: 10px;
+}
+.paginate a i {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-fontColor);
+}
+.paginate a.first i.prev-arrow-double {
+  display: block;
+  width: 13px; height: 13px;
+  -webkit-mask: url('../img/service/icon-prev-arrow-double.svg?e') no-repeat center;
+          mask: url('../img/service/icon-prev-arrow-double.svg?e') no-repeat center;
+}
+.paginate a.last i.next-arrow-double {
+  display: block;
+  width: 13px; height: 13px;
+  -webkit-mask: url('../img/service/icon-next-arrow-double.svg?e') no-repeat center;
+          mask: url('../img/service/icon-next-arrow-double.svg?e') no-repeat center;
+}
+.paginate a.prev i.prev-arrow {
+  display: block;
+  width: 13px; height: 13px;
+  -webkit-mask: url('../img/service/icon-prev-arrow.svg?e') no-repeat center;
+          mask: url('../img/service/icon-prev-arrow.svg?e') no-repeat center;
+}
+.paginate a.next i.next-arrow {
+  display: block;
+  width: 13px; height: 13px;
+  -webkit-mask: url('../img/service/icon-next-arrow.svg?e') no-repeat center;
+          mask: url('../img/service/icon-next-arrow.svg?e') no-repeat center;
+}
+.paginate a:hover {
+  border-color: var(--color-point);
+}
+.paginate a:hover i {
+  background-color: var(--color-point);
+}
+
+
+/********************************************************************
+              스크롤바 style css
+********************************************************************/
+/* 스크롤바 설정*/
+.menu-wrap::-webkit-scrollbar {
+  width: 10px;
+}
+/* 스크롤바 막대 설정*/
+.menu-wrap::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, .25); border: 1px solid rgba(255, 255, 255, .45);
+  border-radius: 8px;
+}
+/* 스크롤바 뒷 배경 설정*/
+.menu-wrap::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, .15);
+}
+
+/* 스크롤바 설정*/
+.content-wrap .dash-board-wrap::-webkit-scrollbar,
+.content-wrap .sub-conts-wrap::-webkit-scrollbar {
+  width: 10px;
+}
+/* 스크롤바 막대 설정*/
+.content-wrap .dash-board-wrap::-webkit-scrollbar-thumb,
+.content-wrap .sub-conts-wrap::-webkit-scrollbar-thumb {
+  background: var(--color-azure); border: 1px solid var(--color-point);
+  border-radius: 8px;
+}
+/* 스크롤바 뒷 배경 설정*/
+.content-wrap .dash-board-wrap::-webkit-scrollbar-track,
+.content-wrap .sub-conts-wrap::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+
+
+/*********************************************************************************************
+						  UI Datepicker Style css
+*****************************/
+#ui-datepicker-div {
+  padding: 0;
+  width: 315px !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: solid rgba(255, 255, 255, .55)!important;
+  border-width: 1px 0 0 1px!important;
+}
+.ui-datepicker td {
+  border: 1px solid #CCC !important;
+  padding: 0 !important
+}
+.ui-datepicker-calendar thead tr th {
+  border: 1px solid #CCC !important;
+  background: linear-gradient(20deg, #e2e2e2, #eeeeee) !important;
+}
+.ui-datepicker-calendar thead tr th span {
+  display: block;
+  font-size: var(--font-size-12); color: var(--color-black);
+  text-transform: uppercase !important;
+  border: solid rgba(255, 255, 255, .55) !important;
+  border-width: 1px 0 0 1px !important;
+  width: 100%; height: 22px; line-height: 22px;
+}
+.ui-widget-header {
+  background: #2d2d2d !important;
+  border: 0 !important
+}
+.ui-datepicker .ui-datepicker-title select {
+  background: #2d2d2d !important;
+  color: var(--color-white) !important;
+  font-size: 15px !important;
+}
+.ui-widget-header .ui-icon {
+  background-image: none !important;
+}
+.ui-datepicker .ui-datepicker-title {
+  margin-top: 4px !important;
+  color: var(--color-white);
+}
+.ui-datepicker .ui-datepicker-title > span {
+  color: var(--color-white);
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
+.ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  background: linear-gradient(20deg, #e2e2e2, #eeeeee) !important;
+}
+.ui-state-default {
+  font-size: var(--font-size-12);
+  font-weight: bold !important;
+}
+.ui-datepicker td span, .ui-datepicker td a {
+  padding: 12px 0 !important;
+  text-align: center !important;
+}
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+  width: 33% !important;
+  padding-left: 22px !important;
+}
+.ui-datepicker th {
+  padding: 0 0 !important;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover,
+.ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus,
+.ui-button:hover, .ui-button:focus {
+  background: #1EB7AD !important;
+  box-shadow: inset 0px 0px 10px #32DACF, inset 0px 0px 20px #35e5f5 !important;
+  color: var(--color-white) !important;
+}
+.ui-datepicker .ui-datepicker-next span {
+  margin-left: -3px;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+  top: 1px;
+}
+.ui-datepicker .ui-datepicker-next {
+  right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+  left: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span {
+  margin-left: -14px;
+}
+.ui-datepicker .ui-datepicker-next.ui-datepicker-next-hover,
+.ui-datepicker .ui-datepicker-prev.ui-datepicker-prev-hover {
+  background: rgba(255, 255, 255, .10) !important;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, .75), inset 0px 0px 5px rgba(255, 255, 255, .25) !important;
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next,
+.ui-datepicker-prev.ui-state-hover.ui-datepicker-prev-hover,
+.ui-datepicker-next.ui-state-hover.ui-datepicker-next-hover {
+  width: 37px; height: 37px;
+}
+.ui-datepicker table {
+  margin: 0 !important;
+}
+.ui-datepicker-next, .ui-datepicker-prev {
+  border: 0 !important;
+}
+
+/*Right Arrow*/
+.ui-datepicker .ui-datepicker-next span {
+  width: 0!important; height: 0!important;
+  border-left: 10px solid white!important;
+  border-right: 8px solid transparent!important;
+  border-bottom: 8px solid transparent!important;
+  border-top: 8px solid transparent!important;
+}
+
+/*Left Arrow*/
+.ui-datepicker .ui-datepicker-prev span {
+  width: 0!important; height: 0!important;
+  border-right: 10px solid white!important;
+  border-left: 8px solid transparent!important;
+  border-bottom: 8px solid transparent!important;
+  border-top: 8px solid transparent!important;
+}
+.ui-datepicker-trigger {
+  font-size: 0;
+}

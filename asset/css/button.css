@@ -1,0 +1,81 @@
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center; align-items: center;
+  width: 100%;
+  padding: 0px;
+  text-align: center; text-decoration: none;
+  border-radius: 3px;
+  font-family: var(--font-family-noto); font-size: var(--font-14); font-weight: 500;
+  /* box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.1); */
+  cursor: pointer;
+}
+.button:hover {
+  text-decoration: none;
+}
+.button:active {
+  position:relative;
+  top:2px;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
+}
+
+.real-time {
+  display: flex; justify-content: center; align-items: center;
+  width: 140px; height: 34px;
+  font-size: var(--font-16); font-weight: 500; color: var(--color-white);
+  background-color: var(--color-point); border-radius: 7px;
+}
+.linesky {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-light-blue);
+  color: var(--color-light-blue);
+}
+.linesky:hover {
+  border: 1px solid var(--color-skyblue);
+  color: var(--color-skyblue);
+}
+.skyblue {
+  background-color: var(--color-light-blue);
+  color: var(--color-fontNavy);
+}
+.light-blue {
+  background-color: var(--color-light-blue);
+  color: var(--color-fontNavy);
+}
+.lime {
+  background-color: var(--color-lime);
+  color: var(--color-fontNavy);
+}
+.orange:focus,
+.orange {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+
+.skyblue:hover,
+.light-blue:hover,
+.lime:hover,
+.orange:hover {
+  background-color: var(--color-point);
+  color: var(--color-white);
+}
+
+.text-link {
+  font-size: var(--font-14); font-weight: 700;
+  color: var(--color-light-blue);
+  text-decoration: underline;
+}
+.text-link:hover {
+  color: var(--color-skyblue);
+  text-decoration: underline;
+}
+.text-link:active {
+  color: var(--color-skyblue);
+  text-decoration: underline;
+}
+
+.tab {
+  width: 40px; height: 40px;
+  border-radius: 7px;
+  background-color: var(--color-light-blue);
+}
